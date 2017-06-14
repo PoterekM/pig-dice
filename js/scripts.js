@@ -1,3 +1,9 @@
+// function Roll (playerOne, totalOne, newRoll) {
+//   this.playerOne = playerOneName;
+//   this.totalOne = OneTurn;
+//   this.newRoll = [];
+// } more on this TOMORROW
+
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -35,12 +41,15 @@ $("#userinput").submit(function(event) {
 //returns player name
   $("#roll").click(function(event) {
     var firstRoll = getRandomIntInclusive(1, 6);
-    playerOneTotal += firstRoll; //make into variable eventually
+    var totalOne = playerOneTotal += firstRoll; //make into variable eventually
     $("#player-one-roll").text(firstRoll);
     $("#player-one-total").text(playerOneTotal);
+    // newRoll = new Roll(playerOne, totalOne, newRoll); MORE ON THIS TOMORROW
     console.log(playerOneTotal);
     if(firstRoll === 1) {
       playerOneTotal = 0;
+    } else if (totalOne >= 100) {
+      alert("you win!")
     }
 // console.log(firstRoll);
   });
