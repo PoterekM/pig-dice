@@ -1,3 +1,9 @@
+var randomNumber = "";
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(1);
+  max = Math.floor(6);
+  return Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+}
 
 
 
@@ -28,7 +34,7 @@ $("#userinput").submit(function(event) {
   $("#user-two-name").text(playerTwo);
 //returns player name
   $("#roll").click(function(event) {
-    alert("hi");
+    alert(randomNumber);
   });
   $("#hold").click(function(event) {
     alert("turds!")
