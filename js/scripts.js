@@ -1,18 +1,11 @@
 var randomNumber = "";
 function getRandomIntInclusive(min, max) {
-  min = Math.ceil(1);
-  max = Math.floor(6);
-  return Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
-
-
-
-
-
-
-
+console.log(randomNumber);
 
 
 
@@ -34,11 +27,14 @@ $("#userinput").submit(function(event) {
   $("#user-two-name").text(playerTwo);
 //returns player name
   $("#roll").click(function(event) {
-    alert(randomNumber);
+    //var firstRoll = getRandomIntInclusive(1, 6);
+    var firstRoll = getRandomIntInclusive(1, 6);
+console.log(firstRoll);
   });
   $("#hold").click(function(event) {
     alert("turds!")
   });
+
 
 
 
