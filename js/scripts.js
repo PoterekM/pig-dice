@@ -1,11 +1,11 @@
-var randomNumber = "";
+
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-console.log(randomNumber);
+// console.log(randomNumber);
 
 
 
@@ -27,13 +27,16 @@ $("#userinput").submit(function(event) {
   $("#user-two-name").text(playerTwo);
 //returns player name
   $("#roll").click(function(event) {
-    //var firstRoll = getRandomIntInclusive(1, 6);
     var firstRoll = getRandomIntInclusive(1, 6);
+    $("#diceRoll").text(firstRoll);
+
+
 console.log(firstRoll);
   });
   $("#hold").click(function(event) {
     alert("turds!")
   });
+
 
 
 
