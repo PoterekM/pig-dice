@@ -24,11 +24,17 @@ $("#userinput").submit(function(event) {
 
   var playerOne = $("input#player-one-name").val();
   var playerTwo = $("input#player-two-name").val();
+  $("#user-one-name").text(playerOne);
+  $("#user-two-name").text(playerTwo);
+//returns player name
+  $("#roll").click(function(event) {
+    alert("hi");
+  });
+  $("#hold").click(function(event) {
+    alert("turds!")
+  });
 
-  console.log("boop");
-$("#user-one-name").text(playerOne);
-$("#user-two-name").text(playerTwo);
 
-  console.log(playerOne);
+
 });
 });
