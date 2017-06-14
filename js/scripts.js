@@ -7,11 +7,17 @@ function getRandomIntInclusive(min, max) {
 
 // console.log(randomNumber);
 
-var playerOneTotal = [];
+var playerOneTotal = 0;
 var playerTwoTotal = [];
+var sparkleFarts = [];
+for(i = 0; i <= playerOneTotal.length; i += 1) {
+  sparkleFarts.push([i]);
+  // console.log(playerOneTotal);
+}
 
 
-
+// console.log(sparkleFarts);
+// console.log(firstRoll);
 
 
 
@@ -29,15 +35,15 @@ $("#userinput").submit(function(event) {
 //returns player name
   $("#roll").click(function(event) {
     var firstRoll = getRandomIntInclusive(1, 6);
-  playerOneTotal.push(firstRoll);
+    playerOneTotal += firstRoll;
+    $("#player-one-roll").text(firstRoll);
     $("#player-one-total").text(playerOneTotal);
-
-console.log(firstRoll);
+    console.log(playerOneTotal);
+// console.log(firstRoll);
   });
   $("#hold").click(function(event) {
     alert("turds!")
   });
-
 
 
 
