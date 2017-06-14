@@ -35,15 +35,19 @@ $("#userinput").submit(function(event) {
 //returns player name
   $("#roll").click(function(event) {
     var firstRoll = getRandomIntInclusive(1, 6);
-    playerOneTotal += firstRoll;
+    playerOneTotal += firstRoll; //make into variable eventually
     $("#player-one-roll").text(firstRoll);
     $("#player-one-total").text(playerOneTotal);
     console.log(playerOneTotal);
+    if(firstRoll === 1) {
+      playerOneTotal = 0;
+    }
 // console.log(firstRoll);
   });
   $("#hold").click(function(event) {
     alert("turds!")
   });
+
 
 
 
