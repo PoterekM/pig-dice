@@ -7,7 +7,8 @@ function getRandomIntInclusive(min, max) {
 
 // console.log(randomNumber);
 
-
+var playerOneTotal = [];
+var playerTwoTotal = [];
 
 
 
@@ -28,8 +29,8 @@ $("#userinput").submit(function(event) {
 //returns player name
   $("#roll").click(function(event) {
     var firstRoll = getRandomIntInclusive(1, 6);
-    $("#diceRoll").text(firstRoll);
-
+  playerOneTotal.push(firstRoll);
+    $("#player-one-total").text(playerOneTotal);
 
 console.log(firstRoll);
   });
