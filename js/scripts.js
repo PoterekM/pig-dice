@@ -64,7 +64,7 @@ $("#userinput").submit(function(event) {
 //returns player name
 });
   $("#roll").click(function(event) {
-    var grandTotal = (newPlayer1)
+    // var grandTotal = (newPlayer1)
     var firstRoll = getRandomIntInclusive(1, 6);
     var totalOne = playerOneTotal += firstRoll;
     $("#player-one-roll").text(firstRoll);
@@ -77,7 +77,7 @@ $("#userinput").submit(function(event) {
 
 
     $("#roll").click(function(event) {
-      var grandTotal = (newPlayer2);
+      // var grandTotal = (newPlayer2);
       var firstRoll = getRandomIntInclusive(1, 6);
       var totalTwo = playerTwoTotal += firstRoll;
       $("#player-two-roll").text(firstRoll);
@@ -87,12 +87,11 @@ $("#userinput").submit(function(event) {
       // } else if (totalTwo >= 100) {
       //   alert("you win!")
     })
-  });
-    console.log(playerOneTotal);
 
     $("#hold").on('click',function(event) {
       $("#turn").toggleClass("a");
-      // alert(turn)
+      alert("turn");
     });
 
+  });
 // console.log(firstRoll);
