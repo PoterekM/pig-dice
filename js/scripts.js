@@ -2,7 +2,7 @@ function Player (name, randomCurrent, total, grandTotal) {
   this.name = name;
   this.random = randomCurrent; //?
   this.total = total;
-  this.grandTotal = grandTotal;
+  this.grandTotal = 0;
 }
 
 
@@ -20,7 +20,8 @@ Player.prototype.fullStats = function() {
 }
 
 Player.prototype.grandTotal = function() {
-  return this.total + this.grandTotal;
+  this.total + this.grandTotal;
+  return this.grandTotal;
 }
 
 
@@ -56,13 +57,14 @@ $("#userinput").submit(function(event) {
 
   var playerOne = $("input#player-one-name").val();
   var playerTwo = $("input#player-two-name").val();
-  var newPlayer1 = new Player(playerOne);
-  var newPlayer2 = new Player(playerTwo);
+  newPlayer1 = new Player;
+  newPlayer2 = new Player;
   $("#user-one-name").text(playerOne);
   $("#user-two-name").text(playerTwo);
 //returns player name
 });
   $("#roll").click(function(event) {
+    var grandTotal = (newPlayer1)
     var firstRoll = getRandomIntInclusive(1, 6);
     var totalOne = playerOneTotal += firstRoll;
     $("#player-one-roll").text(firstRoll);
@@ -75,6 +77,7 @@ $("#userinput").submit(function(event) {
 
 
     $("#roll").click(function(event) {
+      var grandTotal = (newPlayer2);
       var firstRoll = getRandomIntInclusive(1, 6);
       var totalTwo = playerTwoTotal += firstRoll;
       $("#player-two-roll").text(firstRoll);
