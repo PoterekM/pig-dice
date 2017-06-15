@@ -1,3 +1,10 @@
 #turn .turn_a{display:none}
 #turn.a .turn_a{display:block}
 #turn.a .turn_b{display:none}
+
+body {
+  background-image: url("img/imagepig.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-shadow: 1px 1px white;
+}

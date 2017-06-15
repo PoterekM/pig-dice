@@ -18,6 +18,8 @@ Player.prototype.shortHand = function () {
   return this.total;
   console.log(total);
 }
+
+
 console.log();
 
 Player.prototype.totalMaker = function() {
