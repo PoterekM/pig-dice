@@ -27,15 +27,34 @@
       </div>
       <div class="well">
         <div id="show-user-name">
-          <h4><span id="user-one-name"></span></h4>
-          <h4><span id="user-two-name"></span></h4>
+          <div class="row">
+            <div class="col-md-6">
+              <h4><span id="user-one-name"></span></h4>
+              <p> player 1 roll: <span id="player-one-roll"></span></p>
+              <p> player 1 total: <span id="player-one-total"></span></p>
+            </div>
+
+
+            <div class="col-md-6">
+              <h4><span id="user-two-name"></span></h4>
+              <p> player 2 roll :<span id="player-two-roll"></span></p>
+              <p> player 2 total: <span id="player-two-total"></span></p>
+
+
+            </div>
+          </div>
+
+          </div>
         </div>
+        <div id="turn">
+          <div class="turn_a"><span id="user-one-name"></span>Player One's Turn!</div>
+          <div class="turn_b"><span id="user-two-name"></span>Player Two's Turn!</div>
+        </div>
+
         <span><button type="click" id="roll">Roll!</button></span>
         <span><button type="click" id="hold">Hold</button></span>
         <span id="diceRoll"></span>
-        <p> player 1 roll: <span id="player-one-roll"></span></p>
-        <p> player 1 total: <span id="player-one-total"></span></p>
-        <p> player 2 roll :<span id="player-two-total"></span></p>
+
       </div>
     </div>
   </body>
