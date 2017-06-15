@@ -1,7 +1,7 @@
 function Player (name) {
   this.name = name;
   this.currentRoll = 0; //?
-  this.total = [];
+  this.total = 0;
   this.grandTotal = 0;
 }
 
@@ -19,6 +19,7 @@ Player.prototype.shortHand = function () {
   console.log(total);
 }
 console.log();
+
 Player.prototype.totalMaker = function() {
   this.grandTotal += this.currentRoll;
   return this.grandTotal;
@@ -60,8 +61,8 @@ $("#userinput").submit(function(event) {
     var firstRoll = (newPlayer1.eachRoll());
     var rollin = (newPlayer1.shortHand());
 
-    $("#player-one-roll").append(firstRoll);
-    $("#player-one-total").append(rollin);
+    $("#player-one-roll").text(firstRoll);
+    $("#player-one-total").text(rollin);
 
     console.log(rollin);
   });
