@@ -19,26 +19,26 @@ Player.prototype.fullStats = function() {
   return this.name + " " + this.turn + this.total
 }
 
-Player.prototype.grandTotal = function() {
-  this.total + this.grandTotal;
+Player.prototype.totalMaker = function() {
+  this.total += this.grandTotal;
   return this.grandTotal;
 }
 
 
 // console.log(randomNumber);
 
-var playerOneTotal = 0;
-var sparkleFarts = [];
-for(i = 0; i <= playerOneTotal.length; i += 1) {
-  sparkleFarts.push([i]);
-  // console.log(playerOneTotal);
-}
-var playerTwoTotal = 0;
-var sparkleFarts2 = [];
-for(i = 0; i <= playerTwoTotal.length; i += 1) {
-  sparkleFarts2.push([i]);
-  // console.log(playerOneTotal);
-}
+// var playerOneTotal = 0;
+// var sparkleFarts = [];
+// for(i = 0; i <= playerOneTotal.length; i += 1) {
+//   sparkleFarts.push([i]);
+//   // console.log(playerOneTotal);
+// }
+// var playerTwoTotal = 0;
+// var sparkleFarts2 = [];
+// for(i = 0; i <= playerTwoTotal.length; i += 1) {
+//   sparkleFarts2.push([i]);
+//   // console.log(playerOneTotal);
+// }
 
 
 
@@ -63,12 +63,12 @@ $("#userinput").submit(function(event) {
   $("#user-two-name").text(playerTwo);
 //returns player name
 });
-  $("#roll").click(function(event) {
-    // var grandTotal = (newPlayer1)
+  $("#roll-user-one").click(function(event) {
+    var grandTotal = (Player.totalMaker);
     var firstRoll = getRandomIntInclusive(1, 6);
-    var totalOne = playerOneTotal += firstRoll;
+    var totalOne = $(newPlayer1.total += firstRoll);
     $("#player-one-roll").text(firstRoll);
-    $("#player-one-total").text(playerOneTotal);
+    $("#player-one-total").text(totalOne);
     // if(firstRoll === 1) {
     //   playerOneTotal = 0;
     // } else if (totalOne >= 100) {
@@ -76,7 +76,7 @@ $("#userinput").submit(function(event) {
   })
 
 
-    $("#roll").click(function(event) {
+    $("#roll-user-two").click(function(event) {
       // var grandTotal = (newPlayer2);
       var firstRoll = getRandomIntInclusive(1, 6);
       var totalTwo = playerTwoTotal += firstRoll;
@@ -88,7 +88,11 @@ $("#userinput").submit(function(event) {
       //   alert("you win!")
     })
 
-    $("#hold").on('click',function(event) {
+    $("#hold-user-one").on('click',function(event) {
+      $("#turn").toggleClass("a");
+      alert("turn");
+    });
+    $("#hold-user-two").on('click',function(event) {
       $("#turn").toggleClass("a");
       alert("turn");
     });
