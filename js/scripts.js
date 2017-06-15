@@ -3,6 +3,7 @@ function Player (name) {
   this.currentRoll = 0; //?
   this.total = 0;
   this.grandTotal = 0;
+  this.turn = 0;
 }
 
 Player.prototype.eachRoll = function () {
@@ -28,6 +29,14 @@ Player.prototype.totalMaker = function() {
   console.log(grandTotal);
 }
 console.log();
+
+Player.prototype.twoRules = function() {
+  if (currentRoll === 1) {
+    return this.turn = "false";
+  } else (grandTotal === 100)
+    return this.turn = "true";
+  }
+}
 
 // var playerOneTotal = 0;
 // var sparkleFarts = [];
@@ -71,10 +80,10 @@ $("#userinput").submit(function(event) {
 
 
     $("#roll-user-two").click(function(event) {
-        var grandTotal = (newPlayer1.totalMaker());
+      var grandTotal = (newPlayer2.totalMaker());
       var firstRoll = (newPlayer2.eachRoll());
       var rollin = (newPlayer2.shortHand());
-    $("#player-two-roll").append(firstRoll);
+    $("#player-two-roll").text(firstRoll);
       $("#player-two-total").text(rollin);
     })
 
@@ -85,6 +94,9 @@ $("#userinput").submit(function(event) {
     $("#hold-user-two").on('click',function(event) {
       $("#turn").toggleClass("a");
       alert("turn");
-    });
 
+    });
+    var youLose = (Player.twoRules()) {
+    alert(youLose);
+  }
   });
